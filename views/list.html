@@ -1,0 +1,22 @@
+<div class = "panel panel-default"> 
+  <div class="panel-heading">
+    <h3 class="panel-title">USERS</h3>
+  </div>
+  <div class="panel-body">
+  <table class="table">
+    <thead>
+     <tr><th>#</th><th>email</th><th>password</th><th>sex</th><th>Notification</th><th>Tools</th></tr>   
+    </thead>
+    <tbody> 
+     <tr ng-repeat="user in users|orderBy:'email'">
+       <td>{{ user.id }}</td><td>{{ user.email }}</td><td>{{ user.password }}</td>
+       <td>{{ sex[user.sex] }}</td><td>{{ user.notification }}</td>
+       <td><button class="btn btn-default" ng-click="edit(user.id)">edit</button>
+        <button class="btn btn-default" ng-click="remove(user.id)">delete</button>
+       </td>
+     </tr>
+    </tbody>                                                                                             
+  </table>
+  <p><a href ='#ewtye' >back</a></p> 
+  </div>
+</div>
